@@ -3,6 +3,7 @@ import { UserCardComponent } from '../user-card/user-card.component';
 import { Userdata } from '../userdata';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { UserFetchService } from '../user-fetch.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit{
         phone: '9999999999'
     };
 
-      user_info: Userdata[] = [];
+    user_info: Userdata[] = []; 
 
     httpclient =inject(HttpClient);
 
@@ -35,5 +36,33 @@ export class HomeComponent implements OnInit{
         console.log(data);
         this.user_info = data;
       });
+    }
+
+    userdata_list: Userdata[] = [];
+    userfetchServ : UserFetchService = inject(UserFetchService);
+    //     {
+    //       id: 101,
+    //       name: 'Ankit',
+    //       email: 'abc@gmail',
+    //       city: 'Jaipur',
+    //       phone: '11111111'
+    //     },
+    //     {
+    //       id: 102,
+    //       name: 'Rohan',
+    //       email: 'xyz@gmail',
+    //       city: 'Noida',
+    //       phone: '2222222'
+    //     },
+    //     {
+    //       id: 103,
+    //       name: 'Sohan',
+    //       email: 'nano@gmail',
+    //       city: 'Udaipur',
+    //       phone: '333333'
+    //     }
+    // ]
+    constructor(){
+        this.userdata_list=this.userfetchServ.getAllUserInfo();
     }
 }
