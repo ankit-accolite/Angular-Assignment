@@ -1,0 +1,14 @@
+#naam
+{
+    width: 400px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 10px 5px 10px 5px;
+}
+.primary
+{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(60, 140, 206);
+}
