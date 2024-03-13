@@ -1,9 +1,13 @@
-<p>My Angular home works!</p>
+<h1 id="heading">Users Information</h1>
 <form>
     <input type="text" id="naam" placeholder="Enter Name to Search">
     <button class="primary">Search</button>
 </form>
-<section class="results"> 
-    <app-user-card [smpdata]="sample_user"></app-user-card>
-    <app-user-card [smpdata]="sample_user"></app-user-card>
-</section>
+<!--section class="results" *ngFor = "let item of user_info"> 
+    < @for (item of user_info; track item.id) {
+        <h3>{{item.id}}</h3>
+        <app-user-card [smpdata]="item"></app-user-card>
+    </section>
+    } --> 
+    <app-user-card *ngFor="let item of user_info"
+    [smpdata]="item"> </app-user-card>

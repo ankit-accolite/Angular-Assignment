@@ -12,3 +12,9 @@
     border-radius: 20px;
     background-color: rgb(60, 140, 206);
 }
+#heading
+{
+    text-align: center;
+    font-family: Verdana;
+    margin-left: 10%;
+}
