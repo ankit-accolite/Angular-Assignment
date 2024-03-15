@@ -39,10 +39,3 @@ export class HomeComponent implements OnInit{
       });
     }
   }
-    
-    // userdata_list: Userdata[] = [];
-    // userfetchServ : UserFetchService = inject(UserFetchService);
-    
-    // constructor(){
-    //     this.userdata_list=this.userfetchServ.getAllUserInfo();
-    // }
