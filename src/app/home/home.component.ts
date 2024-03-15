@@ -32,10 +32,8 @@ export class HomeComponent implements OnInit{
 
     fetchData()
     {
-      alert("Function Called");
       this.httpclient.get('https://jsonplaceholder.typicode.com/users')
       .subscribe((data: any) => {
-        console.log(data);
         this.user_info = data;
         this.uds.addtoMyArray(this.user_info);
       });

@@ -7,7 +7,7 @@ import { Userdata } from '../userdata';
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [],
+  imports: [ CommonModule ],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.css'
 })
