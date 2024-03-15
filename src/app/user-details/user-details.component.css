@@ -1,0 +1,17 @@
+#user_photo
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    margin: 10px 5px 10px 5px;
+}
+.detail
+{
+    height: 90%;
+    width: 60%;
+    margin: 5% 20% 5% 20%;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    background-color: azure;
+    border-radius: 20px;
+}

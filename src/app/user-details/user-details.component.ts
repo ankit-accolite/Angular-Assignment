@@ -13,9 +13,13 @@ import { Userdata } from '../userdata';
 })
 export class UserDetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  username = 'NA';
+  userdetailsfetchservice = inject(UserFetchService);
+  userbriefdata: Userdata | undefined;
+
   constructor()
   {
-    this.username = String(this.route.snapshot.params['name']);
+    const username = String(this.route.snapshot.params['name']);
+    alert("Welcome : "+username);
+    this.userbriefdata = this.userdetailsfetchservice.getUserInfoByName(username);
   }
 }

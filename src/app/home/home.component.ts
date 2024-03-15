@@ -16,13 +16,15 @@ export class HomeComponent implements OnInit{
         id: 101,
         name: 'Test Name',
         email: 'Test Email',
-        city: 'India',
-        phone: '9999999999'
+        phone: '9999999999',
+        username: 'NA',
+        website: '.com'
     };
 
     user_info: Userdata[] = []; 
 
     httpclient =inject(HttpClient);
+    uds = inject(UserFetchService);
 
     ngOnInit(): void {
       this.fetchData();
@@ -35,34 +37,14 @@ export class HomeComponent implements OnInit{
       .subscribe((data: any) => {
         console.log(data);
         this.user_info = data;
+        this.uds.addtoMyArray(this.user_info);
       });
     }
-
-    userdata_list: Userdata[] = [];
-    userfetchServ : UserFetchService = inject(UserFetchService);
-    //     {
-    //       id: 101,
-    //       name: 'Ankit',
-    //       email: 'abc@gmail',
-    //       city: 'Jaipur',
-    //       phone: '11111111'
-    //     },
-    //     {
-    //       id: 102,
-    //       name: 'Rohan',
-    //       email: 'xyz@gmail',
-    //       city: 'Noida',
-    //       phone: '2222222'
-    //     },
-    //     {
-    //       id: 103,
-    //       name: 'Sohan',
-    //       email: 'nano@gmail',
-    //       city: 'Udaipur',
-    //       phone: '333333'
-    //     }
-    // ]
-    constructor(){
-        this.userdata_list=this.userfetchServ.getAllUserInfo();
-    }
-}
+  }
+    
+    // userdata_list: Userdata[] = [];
+    // userfetchServ : UserFetchService = inject(UserFetchService);
+    
+    // constructor(){
+    //     this.userdata_list=this.userfetchServ.getAllUserInfo();
+    // }
