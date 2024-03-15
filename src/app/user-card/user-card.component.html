@@ -1,5 +1,5 @@
 <section class="listing">
     <img src="/assets/pic.jpg" id="user_photo" alt="Profile Image of {{smpdata.name}}">
-    <h2 class="user_name">{{smpdata.name}}</h2>
+    <h2 class="user_name"><a [routerLink]="['/user-details',smpdata.name]">{{smpdata.name}}</a></h2>
     <h4 class="user_email">{{smpdata.email}}</h4>
 </section>

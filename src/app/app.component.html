@@ -1,4 +1,11 @@
 <main class="main">
-  <app-home></app-home>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <img class="homeicon" src="/assets/hme.png" alt="logo" aria-hidden="true">
+    </header>
+  </a>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
 </main>
 

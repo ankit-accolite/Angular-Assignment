@@ -1,5 +1,5 @@
 <h1 id="heading">Users Information</h1>
-<form>
+<form id="search">
     <input type="text" id="naam" placeholder="Enter Name to Search">
     <button class="primary">Search</button>
 </form>
@@ -9,5 +9,6 @@
         <app-user-card [smpdata]="item"></app-user-card>
     </section>
     } --> 
-    <app-user-card *ngFor="let item of user_info"
-    [smpdata]="item"> </app-user-card>
+        <app-user-card *ngFor="let item of user_info"
+        [smpdata]="item"> </app-user-card>
+    
