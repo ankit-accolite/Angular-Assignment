@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit{
     };
 
     user_info: Userdata[] = []; 
+    filteruser_info : Userdata[] = [];
 
     httpclient =inject(HttpClient);
     uds = inject(UserFetchService);
