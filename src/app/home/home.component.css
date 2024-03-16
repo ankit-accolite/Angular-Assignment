@@ -1,29 +1,10 @@
-#naam
-{
-    width: 400px;
-    height: 30px;
-    border-radius: 15px;
-    margin: 10px 5px 10px 5px;
-}
-#search
-{
-    margin-left: 30%;
-    margin-right: 20%;
-}
-.primary
-{
-    width: 200px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: rgb(60, 140, 206);
-}
 #heading
 {
     text-align: center;
-    font-family: Verdana;
-    margin-left: 10%;
+    font-family: Georgia;
+    margin-left: 8%;
     font-size: 50px;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 #disp
 {

@@ -1,14 +1,4 @@
 <h1 id="heading">Users Information</h1>
-<form id="search">
-    <input type="text" id="naam" placeholder="Enter Name to Search">
-    <button class="primary">Search</button>
-</form>
-<!--section class="results" *ngFor = "let item of user_info"> 
-    < @for (item of user_info; track item.id) {
-        <h3>{{item.id}}</h3>
-        <app-user-card [smpdata]="item"></app-user-card>
-    </section>
-    } --> 
     <div id="disp">
         <app-user-card *ngFor="let item of user_info"
         [smpdata]="item"> </app-user-card>
