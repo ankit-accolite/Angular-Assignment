@@ -7,4 +7,32 @@
     <h4>Your Email : {{userbriefdata?.email}}</h4>
     <h4>Your Phone : {{userbriefdata?.phone}}</h4>
     <h4>Your Website : {{userbriefdata?.website}}</h4>
+    <h4>Your Company : <h3>{{userbriefdata?.company?.name}}</h3> {{userbriefdata?.company?.catchPhrase}} , {{userbriefdata?.company?.bs}}</h4>
+    <h4>Your Address : {{userbriefdata?.address?.street}} , {{userbriefdata?.address?.suite}} , {{userbriefdata?.address?.city}} , 
+        {{userbriefdata?.address?.zipcode}} , Coordinates :  {{userbriefdata?.address?.geo?.lat}} , {{userbriefdata?.address?.geo?.lng}}
+    </h4>
 </section>
+<!-- 
+{
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+            "lat": "-43.9509",
+            "lng": "-34.4618"
+        }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+    }
+}, -->

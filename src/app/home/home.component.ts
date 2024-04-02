@@ -12,15 +12,6 @@ import { UserFetchService } from '../user-fetch.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
-    sample_user: Userdata ={
-        id: 101,
-        name: 'Test Name',
-        email: 'Test Email',
-        phone: '9999999999',
-        username: 'NA',
-        website: '.com'
-    };
-
     user_info: Userdata[] = []; 
 
     httpclient =inject(HttpClient);
